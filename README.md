@@ -11,10 +11,10 @@ This Apps has 4 End points
 1. Enpdoint for list Member of Organization.
   ```get orgs/<org name>/members```
 2. Enpdoint for list Comment of Organization.
-  ```get orgs/<org name>/members```
+  ```get orgs/<org name>/comment```
 3. Enpdoint for Insert An comment to Organization.
-  ```post orgs/<org name>/members```
+  ```post orgs/<org name>/comment```
 4. Enpdoint for delete all comment in Organization.
-  ```delete orgs/<org name>/members```
+  ```delete orgs/<org name>/comment```
 
 Organization available is ```xendit```
