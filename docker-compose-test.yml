@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: "postgres:11"
+    container_name: "my_postgres"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: xendittest
+      POSTGRES_DB: xendit
+  web:
+    build: .
+    volumes:
+      - /app/node_modules
+      - ".:/app"
+    command: npm test
+
+
