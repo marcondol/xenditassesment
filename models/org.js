@@ -1,22 +1,25 @@
-const Sequilize = require('sequelize')
+const Sequilize = require('sequelize');
 
-const sequelize = require('../database/database')
+const sequelize = require('../database/database');
 
-const Org = sequelize.define('org', {
-  id: {
-    type: Sequilize.INTEGER,
-    autoIncrement: true,
-    allowNull: false,
-    primaryKey: true
+const Org = sequelize.define(
+  'org',
+  {
+    id: {
+      type: Sequilize.INTEGER,
+      autoIncrement: true,
+      allowNull: false,
+      primaryKey: true,
+    },
+    orgNm: {
+      type: Sequilize.STRING,
+      allowNull: false,
+    },
   },
-  orgNm: {
-    type: Sequilize.STRING,
-    allowNull: false
-  }
-},
-{
-  timestamps: true,
-  paranoid: true
-});
+  {
+    timestamps: true,
+    paranoid: true,
+  },
+);
 
-module.exports = Org
+module.exports = Org;

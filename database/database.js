@@ -1,4 +1,9 @@
-const Sequelize = require('sequelize')
-const sequelize = new Sequelize('xendit', 'postgres', 'xendittest', {dialect: 'postgres', host: 'db', logging: false})
+const Sequelize = require('sequelize');
 
-module.exports = sequelize
+const sequelize = new Sequelize('xendit', 'root', '', {
+  dialect: 'mysql',
+  host: 'localhost',
+  logging: false,
+});
+
+module.exports = sequelize;

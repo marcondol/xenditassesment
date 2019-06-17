@@ -14,15 +14,14 @@ router.post(
   [
     body('comment')
       .trim()
-      .isLength({ min: 5 })
+      .isLength({ min: 5 }),
   ],
-  commentControllers.createComment
+  commentControllers.createComment,
 );
 
-//DELETE /orgnm/comment
-router.delete(  '/:orgnm/comment', commentControllers.deleteComment);
+// DELETE /orgnm/comment
+router.delete('/:orgnm/comment', commentControllers.deleteComment);
 
 router.get('/:orgnm/members', commentControllers.getMembersOrg);
-
 
 module.exports = router;
