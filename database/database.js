@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('xendit', 'root', '', {
-  dialect: 'mysql',
-  host: 'localhost',
+const sequelize = new Sequelize('xendit', 'postgres', 'xendittest', {
+  dialect: 'postgres',
+  host: 'db',
   logging: false,
 });
 
